@@ -6,13 +6,12 @@ class Gaffer < Formula
   sha1 "a35fc031f2a58b8ac6a591e09a8a80e817afd309"
 
   def install
-    rm_f Dir["bin/*.cmd"]
     libexec.install %w[bin lib]
-    bin.write_exec_script Dir["#{libexec}/bin/*"]
+    bin.install_symlink libexec+"bin/graffer"
   end
 
   def caveats; <<-EOS.undent
-    Requires Java 1.6.0 or greater.
+    Requires Java 1.7.0 or greater.
 
     For more details:
       https://github.com/jingweno/gaffer
