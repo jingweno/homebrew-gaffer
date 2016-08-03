@@ -3,7 +3,7 @@ require "formula"
 class Gaffer < Formula
   homepage "https://github.com/jingweno/gaffer"
   url "https://github.com/jingweno/gaffer/releases/download/0.0.1/gaffer-0.0.1-dist.zip"
-  sha1 "a35fc031f2a58b8ac6a591e09a8a80e817afd309"
+  sha256 "c6811a1a09faca93e9b4be61be59efe19207807d91d5be6b425ceaa037165fae"
 
   def install
     rm_f Dir["bin/*.bat"]
